@@ -1,0 +1,14 @@
+F:\code\IdentityServerDemo\AuthorizationServer\OcelotDemo\bin\Debug\netcoreapp2.2\OcelotDemo.deps.json
+F:\code\IdentityServerDemo\AuthorizationServer\OcelotDemo\bin\Debug\netcoreapp2.2\OcelotDemo.runtimeconfig.json
+F:\code\IdentityServerDemo\AuthorizationServer\OcelotDemo\bin\Debug\netcoreapp2.2\OcelotDemo.runtimeconfig.dev.json
+F:\code\IdentityServerDemo\AuthorizationServer\OcelotDemo\bin\Debug\netcoreapp2.2\OcelotDemo.dll
+F:\code\IdentityServerDemo\AuthorizationServer\OcelotDemo\obj\Debug\netcoreapp2.2\OcelotDemo.csprojAssemblyReference.cache
+F:\code\IdentityServerDemo\AuthorizationServer\OcelotDemo\obj\Debug\netcoreapp2.2\OcelotDemo.csproj.CoreCompileInputs.cache
+F:\code\IdentityServerDemo\AuthorizationServer\OcelotDemo\obj\Debug\netcoreapp2.2\OcelotDemo.RazorAssemblyInfo.cache
+F:\code\IdentityServerDemo\AuthorizationServer\OcelotDemo\obj\Debug\netcoreapp2.2\OcelotDemo.RazorAssemblyInfo.cs
+F:\code\IdentityServerDemo\AuthorizationServer\OcelotDemo\obj\Debug\netcoreapp2.2\OcelotDemo.AssemblyInfoInputs.cache
+F:\code\IdentityServerDemo\AuthorizationServer\OcelotDemo\obj\Debug\netcoreapp2.2\OcelotDemo.AssemblyInfo.cs
+F:\code\IdentityServerDemo\AuthorizationServer\OcelotDemo\obj\Debug\netcoreapp2.2\OcelotDemo.RazorTargetAssemblyInfo.cache
+F:\code\IdentityServerDemo\AuthorizationServer\OcelotDemo\bin\Debug\netcoreapp2.2\OcelotDemo.pdb
+F:\code\IdentityServerDemo\AuthorizationServer\OcelotDemo\obj\Debug\netcoreapp2.2\OcelotDemo.dll
+F:\code\IdentityServerDemo\AuthorizationServer\OcelotDemo\obj\Debug\netcoreapp2.2\OcelotDemo.pdb
