@@ -1,9 +1,11 @@
-﻿using IdentityServer4;
+﻿using IdentityModel;
+using IdentityServer4;
 using IdentityServer4.Models;
 using IdentityServer4.Test;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace AuthorizationServer
@@ -14,7 +16,9 @@ namespace AuthorizationServer
         {
             return new[]
             {
-                new ApiResource("ClientCredentials", "客户凭据")
+                new ApiResource("ClientCredentialsApi", "客户凭据模式"),
+                new ApiResource("PasswordApi", "密码模式", new List<string>(){ "role" }),
+                new ApiResource("ImplicitApi", "简约模式")
             };
         }
 
@@ -24,21 +28,26 @@ namespace AuthorizationServer
             {
                 new Client
                 {
-                    ClientId = "ClientCredentials",
+                    ClientId = "ClientCredentialsDemo",
                     ClientSecrets = new [] { new Secret("secret".Sha256()) },
-                    AllowedGrantTypes = GrantTypes.ResourceOwnerPasswordAndClientCredentials,
-                    AllowedScopes = new [] { "ClientCredentials" }
+                    AllowedGrantTypes = GrantTypes.ClientCredentials,
+                    AllowedScopes = new [] { "ClientCredentialsApi" } // 对应 ApiResource
                 },
                 new Client
                 {
-                    ClientId = "ResourceOwnerPassword",
+                    ClientId = "PasswordDemo",
                     ClientSecrets = new [] { new Secret("secret".Sha256()) },
-                    AllowedGrantTypes = GrantTypes.ResourceOwnerPasswordAndClientCredentials,
-                    AllowedScopes = new [] { "ResourceOwnerPassword", "ClientCredentials" }
+                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+                    AllowedScopes = new [] {
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile,
+                        IdentityServerConstants.StandardScopes.Email,
+                        "PasswordApi"
+                    }
                 },
                 new Client
                 {
-                    ClientId = "mvc_implicit",
+                    ClientId = "ImplicitClient",
                     ClientName = "MVC Client",
                     AllowedGrantTypes = GrantTypes.Implicit,
                     RedirectUris = { "http://localhost:5002/signin-oidc" },
@@ -47,7 +56,7 @@ namespace AuthorizationServer
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
-                        "ResourceOwnerPassword"
+                        "ImplicitApi"
                     }
                 }
             };
@@ -59,18 +68,32 @@ namespace AuthorizationServer
             {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
+                new IdentityResources.Email()
             };
         }
 
-        public static IEnumerable<TestUser> Users()
+        public static List<TestUser> Users()
         {
-            return new[]
+            return new List<TestUser>
             {
                 new TestUser
                 {
                     SubjectId = "1",
-                    Username = "mail@qq.com",
-                    Password = "password"
+                    Username = "ryan",
+                    Password = "password",
+                    Claims = new List<Claim>{
+                        new Claim("email", "1234567890@qq.com"),
+                        new Claim("role", "superadmin")
+                    }
+                },
+                new TestUser
+                {
+                    SubjectId = "2",
+                    Username = "people",
+                    Password = "123456",
+                    Claims = new List<Claim>{
+                        new Claim("role", "admin")
+                    }
                 }
             };
         }

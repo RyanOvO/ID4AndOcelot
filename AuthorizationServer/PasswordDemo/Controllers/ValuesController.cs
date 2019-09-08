@@ -7,19 +7,21 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace PasswordDemo.Controllers
 {
-    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
     {
         // GET api/values
+        [Authorize(Roles = "superadmin")]
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public string Get()
         {
-            return new string[] { "value1", "value2" };
+            //return new JsonResult(from c in HttpContext.User.Claims select new { c.Type, c.Value });
+            return "superadmin角色访问";
         }
 
         // GET api/values/5
+        [Authorize(Roles = "admin")]
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {

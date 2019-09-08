@@ -48,7 +48,7 @@ namespace ImplictClient
                 options.Authority = "http://localhost:5000";
                 options.RequireHttpsMetadata = false;
 
-                options.ClientId = "mvc_implicit";
+                options.ClientId = "ImplicitClient";
                 options.SaveTokens = true;
             });
         }

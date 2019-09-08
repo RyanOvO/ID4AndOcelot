@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ArrayOfArrayOfString>
+    <ArrayOfString>
+      <string>E:\Code\ID4AndOcelot\AuthorizationServer\AuthorizationServer\Config.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Code\ID4AndOcelot\AuthorizationServer\PasswordDemo\Startup.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Code\ID4AndOcelot\AuthorizationServer\AuthorizationServer\Startup.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Code\ID4AndOcelot\AuthorizationServer\ImplictClient\Startup.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Code\ID4AndOcelot\AuthorizationServer\MvcClient\Startup.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Code\ID4AndOcelot\AuthorizationServer\PasswordDemo\Controllers\ValuesController.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\Code\ID4AndOcelot\AuthorizationServer\PasswordDemo\Controllers\DefaultController.cs</string>
+    </ArrayOfString>
+  </ArrayOfArrayOfString>
+</ArrayOfArrayOfArrayOfString>

@@ -34,7 +34,7 @@ namespace MvcClient
                 {
                     options.RequireHttpsMetadata = false;
                     options.Authority ="http://localhost:5000";
-                    options.ApiName = "ClientCredentials";
+                    options.ApiName = "ClientCredentialsApi";
                 });
         }
 

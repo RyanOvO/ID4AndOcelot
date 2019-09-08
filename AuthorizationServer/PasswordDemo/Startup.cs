@@ -25,7 +25,13 @@ namespace PasswordDemo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvcCore()
-                .AddAuthorization()
+                .AddAuthorization(options =>
+                {
+                    //options.AddPolicy("MyPolicy", authBuilder =>
+                    //{
+                    //    authBuilder.RequireRole("superadmin,admin");
+                    //});
+                })
                 .AddJsonFormatters();
 
             services.AddAuthentication("Bearer")
@@ -33,7 +39,7 @@ namespace PasswordDemo
                 {
                     options.RequireHttpsMetadata = false;
                     options.Authority = "http://localhost:5000";
-                    options.ApiName = "ResourceOwnerPassword";
+                    options.ApiName = "PasswordApi";
                 });
         }
 
