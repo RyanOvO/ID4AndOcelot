@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientCredentialsDemo", "Mv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImplictClient", "ImplictClient\ImplictClient.csproj", "{8D52B284-1D87-429C-82D2-D96004FE3034}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotDemo", "OcelotDemo\OcelotDemo.csproj", "{96E1DFAD-D0CF-484A-B482-1E8E11E508F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OcelotDemo", "OcelotDemo\OcelotDemo.csproj", "{96E1DFAD-D0CF-484A-B482-1E8E11E508F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordDemo", "PasswordDemo\PasswordDemo.csproj", "{20B82321-8109-4EB7-96C8-3DD3EC82AA00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PasswordDemo", "PasswordDemo\PasswordDemo.csproj", "{20B82321-8109-4EB7-96C8-3DD3EC82AA00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizeCodeClient", "AuthorizeCodeClient\AuthorizeCodeClient.csproj", "{61CB913F-BB1D-4FD4-8492-EE79A9A0F5AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{20B82321-8109-4EB7-96C8-3DD3EC82AA00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20B82321-8109-4EB7-96C8-3DD3EC82AA00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20B82321-8109-4EB7-96C8-3DD3EC82AA00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61CB913F-BB1D-4FD4-8492-EE79A9A0F5AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61CB913F-BB1D-4FD4-8492-EE79A9A0F5AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61CB913F-BB1D-4FD4-8492-EE79A9A0F5AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61CB913F-BB1D-4FD4-8492-EE79A9A0F5AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
